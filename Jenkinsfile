@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'php' } }
+    agent { docker { image 'docker-compose-1-7-1-yad' } }
     stages {
         stage('build') {
             steps {
