@@ -1,6 +1,12 @@
+
 pipeline {
-    agent { docker { image 'php' } }
-    stages {
+  agent {
+    kubernetes {
+      label 'jnk-slave-k8s'
+      //defaultContainer 'jnlp'
+    }
+  }
+  stages {
         stage('build') {
             steps {
                 sh 'php --version'
